@@ -1,23 +1,24 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderShape(shape) {
-  if (license === "Circle") {
-    return ""
+function chooseShape(shape) {
+  if (shape === circle) {
+    return `<circle cx="150" cy="100" r="80" fill="${response.shapecolor}" />`
   }
-  else if (license === "Square") {
-    return ""
-  }
-  else if (license === "Triangle") {
-    return ""
+  else if (square === circle) {
+    return `<rect cx="150" cy="100" width="30" height="30" fill="${response.shapecolor}"/>`
   }
   else {
-    return "";
+    return `<polygon points="100,100 50,10 0,100" style="${response.shapecolor}"/>`
   }
 }
 
-
 function generateSVG(response) {
   return `
+  <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+
+ ${chooseShape()}
+
+  <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textcolor}">${response.text}</text>
+
+</svg>
 
 `;
 };
