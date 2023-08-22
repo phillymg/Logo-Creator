@@ -16,7 +16,7 @@ const questions = [
     {
         type: 'list',
         message: 'What shape do you want?',
-        choices: ["Circle", "Square", "Triangle"],
+        choices: ["circle", "square", "triangle"],
         default: "none",
         name: 'shape',
     },
@@ -30,9 +30,9 @@ const questions = [
 inquirer
     .prompt(questions)
 
-    // .then((data) => {
-    //     let allData = markdown.generateMarkdown(data);
-    //     fs.writeFile('.logo.svg', allData, (err) =>
-    //         err ? console.error(err) : console.log('Generated logo.svg')
-    //     )
-    // });
+    .then((data) => {
+        let allData = markdown.generateSVG(data);
+        fs.writeFile('.logo.svg', allData, (err) =>
+            err ? console.error(err) : console.log('Generated logo.svg')
+        )
+    });
