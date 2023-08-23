@@ -17,7 +17,7 @@ const questions = [
         type: 'list',
         message: 'What shape do you want?',
         choices: ["circle", "square", "triangle"],
-        default: "none",
+        default: "circle",
         name: 'shape',
     },
     {
@@ -32,7 +32,7 @@ inquirer
 
     .then((data) => {
         let allData = markdown.generateSVG(data);
-        fs.writeFile('.logo.svg', allData, (err) =>
+        fs.writeFile('./logo.svg', allData, (err) =>
             err ? console.error(err) : console.log('Generated logo.svg')
         )
     });
