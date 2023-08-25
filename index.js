@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const markdown = require('./generateLogo');
 
-function checkCharacters(input) {
+function checkCharacterLength(input) {
     if (input.length > 3) {
         return "Invalid. You may only choose up to three characters"
     } else {
@@ -15,7 +15,7 @@ const questions = [
         type: 'input',
         message: 'Choose up to three characters for your logo.',
         name: 'characters',
-        validate: checkCharacters,
+        validate: checkCharacterLength,
     },
     {
         type: 'input',
