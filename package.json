@@ -4,6 +4,6 @@
     "jest": "^29.6.3"
   },
   "scripts": {
-    "test": "node_modules/.bin/jest"
+    "test": "jest"
   }
 }

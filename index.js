@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const markdown = require('./generateLogo');
-const { Circle, Square, Triangle, Text } = require('./classes');
+const { Circle, Square, Triangle, Text, SVG } = require('./classes');
 
 function checkCharacterLength(input) {
     if (input.length > 3) {
@@ -59,8 +59,11 @@ inquirer
             data.characters,
             data.textcolor
         );
-
-        let allData = markdown.generateSVG(data);
+        const newSVG = new SVG(
+            shape.render(),
+            newText.render()
+        )
+        let allData = newSVG.render();
         fs.writeFile('./logo.svg', allData, (err) =>
             err ? console.error(err) : console.log('Generated logo.svg')
         )
