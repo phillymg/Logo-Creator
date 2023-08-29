@@ -23,6 +23,7 @@ Make sure to install npm by running the command 'npm i' in the command line.
 
 To use, run the application with the command 'node index.js' and then follow the prompts.
 
+https://drive.google.com/file/d/1FZ-PW60zobGaK5CS4MPrr-3ek7QNmD0l/view
 
 ## License
 This project uses the MIT license.
