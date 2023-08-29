@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdown = require('./generateLogo');
-const { Circle, Square, Triangle, Text, SVG } = require('./classes');
+const { Circle, Square, Triangle, Text, SVG } = require('./lib/classes');
 
 function checkCharacterLength(input) {
     if (input.length > 3) {

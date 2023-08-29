@@ -17,7 +17,7 @@ This application lets you make a quick and easy logo wtihout having to hire a gr
 
 ## Installation
 
-Make sure to install nmp by running the command 'npm i' in the command line.
+Make sure to install npm by running the command 'npm i' in the command line.
 
 ## Usage
 
